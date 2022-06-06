@@ -11,8 +11,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Building the app...."
-                //sh "mvn install"
-                mvn -v
+                sh 'mvn test'
             }
         }
         stage('test') {
