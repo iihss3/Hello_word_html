@@ -4,14 +4,14 @@ pipeline {
         choice(name: 'VERSION', choices: ['1.1.0','1.2.0','1.3.0'], description: '')
         booleanParam(name: 'executeTests', defaultValue: true, description: '')
     }
-    tools {
-        maven "Maven3"
-    }
+//    tools {
+//        maven "Maven3"
+//   }
     stages {
         stage('build') {
             steps {
-                echo "Building the app...."
-                sh 'mvn -Dmaven.test.failure.ignore=true install'
+                //echo "Building the app...."
+                sh "mvn clean install"
             }
         }
         stage('test') {
