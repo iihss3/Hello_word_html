@@ -34,6 +34,8 @@ pipeline {
                 echo "deploying the app....."
                 echo "deploying version ${params.VERSION}"
                 bat "cd webapp/target"
+                bat "dir"
+                bat 'If exist "C:/répertoire/ton/fichier.exe" echo le fichier existe'
                 bat "copy webapp.war C:/Users/ihssa/OneDrive/Documents/apache-tomcat-10.0.21-windows-x64/apache-tomcat-10.0.21/webapps/"
             }
         }
