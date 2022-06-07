@@ -35,8 +35,8 @@ pipeline {
                 echo "deploying version ${params.VERSION}"
                 //bat "cd webapp/target"
                 //bat "dir"
-                bat 'If exist "C:/répertoire/ton/fichier.exe" echo le fichier existe'
-                bat "copy ./webapp/target/webapp.war C:/Users/ihssa/OneDrive/Documents/apache-tomcat-10.0.21-windows-x64/apache-tomcat-10.0.21/webapps/"
+                bat 'If exist "C:/Users/ihssa/.jenkins/workspace/JenkisfileDeployment_main/webapp/target/webapp.war" echo le fichier existe'
+                bat "copy C:/Users/ihssa/.jenkins/workspace/JenkisfileDeployment_main/webapp/target/webapp.war C:/Users/ihssa/OneDrive/Documents/apache-tomcat-10.0.21-windows-x64/apache-tomcat-10.0.21/webapps/"
             }
         }
     }
